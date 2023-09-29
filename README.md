@@ -25,8 +25,8 @@ docker container ls -a
 docker build . -t qikweb:v1.0.0
 
 # Run as a container
-docker run -p 4200:4200 --name qikweb qikweb:v1.0.0
-docker run --rm -d -p 4200:4200 --name qikweb qikweb:v1.0.0
+docker run -p 4200:4200 --name qikweb qikweb:1.0.0
+docker run --rm -d -p 4200:4200 --name qikweb qikweb:1.0.0
 
 # Remove the container
 docker container rm --force 3d0184764e63
