@@ -35,7 +35,7 @@ az containerapp create `
     --resource-group $resourceGroup `
     --environment $appContainerEnv `
     --image $imageTag `
-    --target-port 4200 `
+    --target-port 80 `
     --ingress 'external' `
     --query properties.configuration.ingress.fqdn
 
