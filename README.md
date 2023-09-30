@@ -12,6 +12,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# GitHub Procedure
+
+- Can't push to `main`. Must use a feature branch. Use `git reset --hard origin` if you have mistakenly committed to `main`. If you do not want to lose your commits, create a feature branch off of main before you do the reset.
+
 # Dockerized
 
 Useful Docker commands.
