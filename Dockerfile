@@ -1,3 +1,4 @@
+
 FROM node:latest as build
 
 WORKDIR /app
@@ -7,11 +8,10 @@ RUN npm install
 RUN npm install -g @angular/cli
 
 COPY . .
-RUN npm run build
+RUN npm run build:prod
 
-# TODO: (Rob) On applying environment settings... fix this
-# RUN npm run build --prod
+FROM nginx:alpine
+COPY --from=build /app/dist/qik-angular/ /usr/share/nginx/html
 
-EXPOSE 4200
+EXPOSE 80
 
-CMD ["ng", "serve", "--host=0.0.0.0", "--disable-host-check"]
