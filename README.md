@@ -14,8 +14,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # GitHub Procedure
 
-- Can't push to `main`. Must use a feature branch. Use `git reset --hard origin` if you have mistakenly committed to `main` and do not mind losing your commits.
-
+- Can't push to `main`. Must use a feature branch. Use `git reset --hard origin` if you have mistakenly committed to `main`. If you do not want to lose your commits, create a feature branch off of main before you do the reset.
 
 # Dockerized
 
