@@ -18,17 +18,26 @@ Useful Docker commands.
 
 ```bash
 # List images and containers
-docker images list -a
+docker image list -a
 docker container ls -a
 
 # Build a version
-docker build . -t qikweb:v1.0.0
+docker build . -t bobbyache/qikweb:1.0.0
 
 # Run as a container
-docker run -p 4200:4200 --name qikweb qikweb:1.0.0
-docker run --rm -d -p 4200:4200 --name qikweb qikweb:1.0.0
+docker run -p 4200:4200 --name qikweb bobbyache/qikweb:1.0.0
+docker run --rm -d -p 4200:4200 --name qikweb bobbyache/qikweb:1.0.0
 
 # Remove the container
 docker container rm --force 3d0184764e63
+docker image rm 2767308b9f9c
 ```
 
+Pushing it to Docker Hub.
+
+```bash
+# https://docs.docker.com/engine/reference/commandline/login/
+docker logout
+docker login -u bobbyache -p [password]
+docker push bobbyache/qikweb:1.0.0
+```
